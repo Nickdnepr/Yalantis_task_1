@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/recycler_view_height">
+    <ImageView
+            android:layout_width="@dimen/recycler_view_item_length"
+            android:layout_height="@dimen/recycler_view_height"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:id="@+id/photo"/>
+</LinearLayout>

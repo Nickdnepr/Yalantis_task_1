@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstMission</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="name">Utilities</string>
+    <string name="status">In progress</string>
+    <string name="created">Created</string>
+    <string name="createdDate">25 february 2016</string>
+    <string name="detected">detected</string>
+    <string name="detectedDate">26 february 2016</string>
+    <string name="deadline">eliminate to</string>
+    <string name="deadLineDate">29 february 2016</string>
+    <string name="master">responsible</string>
+    <string name="masterName">Dnioropetrovsk CCC</string>
+    <string name="description">Open luke(near advertising shield), district turning 18 and 19 trams at Prospect Mira with the Donetsk highway</string>
+</resources>
