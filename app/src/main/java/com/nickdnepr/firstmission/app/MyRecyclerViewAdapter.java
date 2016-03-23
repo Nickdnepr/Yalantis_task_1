@@ -13,17 +13,17 @@ import java.util.ArrayList;
 /**
  * Created by ADMIN on 12.03.2016.
  */
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> {
-    private ArrayList<String> list;
+public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> { //[Comment] Your Adapter?
+    private ArrayList<String> list; //[Comment] Wrong names
     private Context context;
 
-    public MyRecyclerViewAdapter(ArrayList<String> list, Context context) {
+    public MyRecyclerViewAdapter(ArrayList<String> list, Context context) { //[Comment] Your ViewHolder? It should be ViewHolder
         this.list = list;
         this.context = context;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView photo;
+        ImageView photo; //[Comment] Wrong visibility modifier,
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -35,13 +35,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(context).inflate(R.layout.item_for_recycler_view, viewGroup, false);
         MyViewHolder myViewHolder = new MyViewHolder(v);
-        return myViewHolder;
+        return myViewHolder; //[Comment] return new ViewHolder(v)
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder viewHolder, int i) {
 //        viewHolder.photo.setImageResource(list.get(i));
-        ImageView imageView = viewHolder.photo;
+        ImageView imageView = viewHolder.photo; //[Comment] Unused object
 //        imageView.setImageResource(R.drawable.pushkin1);
         Glide.with(context).load(list.get(i)).into(viewHolder.photo);
     }

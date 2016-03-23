@@ -13,31 +13,34 @@ import android.widget.*;
 
 import java.util.ArrayList;
 
-
+//[Comment] Wrong toolbar and status bar color
+//[Comment] Wrong dividers height
+//[Comment[ Wrong recycler view items padding
+//[Comment] Wrong global paddings
 public class MainActivity extends Activity {
     private LinearLayoutManager linearLayoutManager;
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView; //[Comment] Wrong names. Use google code style. Also these vars should be local
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageView home = (ImageView) findViewById(android.R.id.home);
-        home.setPadding(0, 0, 15, 0);
+        home.setPadding(0, 0, 15, 0); //[Comment] If it's possible, don't set paddings from java code. Magic Numbers
         ActionBar actionBar = getActionBar();
-        actionBar.setHomeButtonEnabled(true);
+        actionBar.setHomeButtonEnabled(true); //[Comment] action bar can be null.
         actionBar.show();
         //----------------------------------------------------------------
         linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>(); //[Comment] Use abstraction instead of realization
         list.add("https://lh5.googleusercontent.com/-QLBuSvH9tSo/UtXIV4wgrfI/AAAAAAAABUE/coUM_sZALMk/w600-h600/%25D9%2584%25D8%25B3%25D9%2586%25D8%25A9%2B%2B%25D8%25A7%25D9%2584%25D8%25AC%25D8%25AF%25D9%258A%25D8%25AF%25D8%25A9%2B%25281%2529.png");
         list.add("https://s-media-cache-ak0.pinimg.com/736x/fa/06/fe/fa06fec6fe5d38147fad57d3b1ae5bf7.jpg");
-        list.add("http://image.blingee.com/images18/content/output/000/000/000/77d/737212129_21943.gif");
+        list.add("http://image.blingee.com/images18/content/output/000/000/000/77d/737212129_21943.gif"); //[Comment] Hardcode
 
-        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(list, MainActivity.this.getApplicationContext());
+        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(list, MainActivity.this.getApplicationContext()); //[Comment] Just this
         recyclerView.setAdapter(adapter);
 
 
@@ -58,9 +61,9 @@ public class MainActivity extends Activity {
         TextView textView8 = (TextView) findViewById(R.id.textView8);
         TextView textView9 = (TextView) findViewById(R.id.textView9);
         TextView textView10 = (TextView) findViewById(R.id.textView10);
-        TextView textView11 = (TextView) findViewById(R.id.textView11);
+        TextView textView11 = (TextView) findViewById(R.id.textView11); //[Comment] NEVER use numbers in id's or object names
 
-        textView1.setOnClickListener(listener);
+        textView1.setOnClickListener(listener); //[Comment] findViewById(R.id.textView1).setOnClickListener(listener);
         textView2.setOnClickListener(listener);
         textView3.setOnClickListener(listener);
         textView4.setOnClickListener(listener);
@@ -93,7 +96,7 @@ public class MainActivity extends Activity {
             case android.R.id.home:
 
                 // app icon in action bar clicked; goto parent activity.
-                this.finish();
+                this.finish(); //[Comment] Just finish() without this.
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -105,6 +108,6 @@ public class MainActivity extends Activity {
 //            return true;
 //        }
 
-//        return super.onOptionsItemSelected(item);
+//        return super.onOptionsItemSelected(item); //[Comment] Commented code
     }
 }
