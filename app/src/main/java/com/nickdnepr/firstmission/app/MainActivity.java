@@ -48,29 +48,17 @@ public class MainActivity extends Activity {
             }
         };
 
-        TextView textView1 = (TextView) findViewById(R.id.textView1);
-        TextView textView2 = (TextView) findViewById(R.id.textView2);
-        TextView textView3 = (TextView) findViewById(R.id.textView3);
-        TextView textView4 = (TextView) findViewById(R.id.textView4);
-        TextView textView5 = (TextView) findViewById(R.id.textView5);
-        TextView textView6 = (TextView) findViewById(R.id.textView6);
-        TextView textView7 = (TextView) findViewById(R.id.textView7);
-        TextView textView8 = (TextView) findViewById(R.id.textView8);
-        TextView textView9 = (TextView) findViewById(R.id.textView9);
-        TextView textView10 = (TextView) findViewById(R.id.textView10);
-        TextView textView11 = (TextView) findViewById(R.id.textView11);
-
-        textView1.setOnClickListener(listener);
-        textView2.setOnClickListener(listener);
-        textView3.setOnClickListener(listener);
-        textView4.setOnClickListener(listener);
-        textView5.setOnClickListener(listener);
-        textView6.setOnClickListener(listener);
-        textView7.setOnClickListener(listener);
-        textView8.setOnClickListener(listener);
-        textView9.setOnClickListener(listener);
-        textView10.setOnClickListener(listener);
-        textView11.setOnClickListener(listener);
+        findViewById(R.id.textView1).setOnClickListener(listener);
+        findViewById(R.id.textView2).setOnClickListener(listener);
+        findViewById(R.id.textView3).setOnClickListener(listener);
+        findViewById(R.id.textView4).setOnClickListener(listener);
+        findViewById(R.id.textView5).setOnClickListener(listener);
+        findViewById(R.id.textView6).setOnClickListener(listener);
+        findViewById(R.id.textView7).setOnClickListener(listener);
+        findViewById(R.id.textView8).setOnClickListener(listener);
+        findViewById(R.id.textView9).setOnClickListener(listener);
+        findViewById(R.id.textView10).setOnClickListener(listener);
+        findViewById(R.id.textView11).setOnClickListener(listener);
 
 
         recyclerView.setOnClickListener(new View.OnClickListener() {
